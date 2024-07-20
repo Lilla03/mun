@@ -126,17 +126,19 @@ body{
     height: fit-content;
     border:1px, gray, solid ;
     border-bottom: none;
-    
+}
+ul{
+    list-style-type: none; 
 }
 .left-bar li{
     list-style-type: none;
     font-size: small;
     text-indent: 10px;
     line-height: 2rem;
-    border:1px, gray, solid ;
+    border:1px, hwb(0deg 50% 50% / 25%), solid;
     border-top: none;
     border-left: none;
-    border-right: none;
+    border-right: none; 
 
 }
 .left-bar li:hover{
@@ -184,13 +186,13 @@ body{
     box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
 }
 
-.product-tag{
+.tag-status{
     position: absolute;
     top: 0;
     left:-0.5;
 
 }
-.tag-soldout{
+.tag-status-custom{
     display: inline-block;
     width: fit-content;
     height: 32px;
@@ -204,30 +206,56 @@ body{
     box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
 
 }
-
+.tag-soldout{
+    position: absolute;
+    top: 35%;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    background-color: hsl(0deg 0% 50.2% / 61%);
+    text-align: center;
+    color: white;
+    padding: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
 .button-detail{
     display: flex;
     justify-content: center;
-
 }
 .button-detail-custom{
-    padding: 0.9em;
+    padding: 1.2em;
     width: 60%;
     background-color: rgb(193, 31, 31);
     color: white;
     border: none;
     position: absolute;
-    top: 50%;
+    top: 70%;
     display: none;
-
 }
-.product-display-item:hover{
+/* .product-display-item:hover{
     cursor: pointer;
-    display: block;
-    color: gray;
-    opacity: 60%;
+} */
+.opa{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: gray;
+    opacity: 0.1;
+    border-radius: 5px;
+    display: none;
 }
-.product-info{
+.product-display-item:hover {
+    cursor: pointer;
+}
+.product-display-item:hover .opa{
+    display: block;
+}
+.product-display-item:hover .button-detail-custom{
+    display: block;
+}
+.product-detail{
     text-align: center;
 }
 .product-img{
@@ -250,11 +278,17 @@ body{
 
     font-size: small;
 }
-.product-price {
+.product-price-current {
     color: rgb(193, 31, 31);
-    margin: 20px;
+    margin: 20px 20px 0px 20px;
     font-size: 120%;
     font-weight: 600;
+}
+.product-price-old{
+    text-decoration-line: line-through;
+    font-size: 14px;
+    color:#2B2D42 ;
+    padding: 10px;
 }
 .product-status {
     margin-right: 10px;
@@ -396,7 +430,7 @@ ul{
     margin-right: 10px;
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 480px) {
     body{
         width: 100%;
         padding: 0;
