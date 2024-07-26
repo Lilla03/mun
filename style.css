@@ -126,7 +126,6 @@ li.navbar-list-item{
 }
 .left-bar{
     padding-left: 0;
-    width: 20%;
     display: grid;
     margin-top: 10px;
     margin-right: 10px;
@@ -190,7 +189,6 @@ ul{
 .product-display-item{
     position: relative;
     margin: 1em;
-    width: 25%;
     border:1px, hwb(0deg 50% 50% / 25%), solid;
     border-radius: 5%;
    
@@ -244,9 +242,9 @@ ul{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 16px 32px;
+    padding: 8px 16px;
     font-size: 16px;
-    width: 60%;
+    width: 100%;
     background-color: rgb(193, 31, 31);
     color: white;
 }
@@ -275,9 +273,8 @@ ul{
 }
 .product-img img{
     display: block;
-    width: 140px;
-    height: 140px;
-    margin-left: 2em;
+    width: 110px;
+    height: 110px;
     margin-left: auto;
     margin-right: auto;
 
@@ -309,11 +306,6 @@ ul{
     margin-top: 0;
 }
 .support-customer{
-    display: flex;
-    flex-direction: row;
-    margin-left: 150px;
-    margin-right: 150px;
-    justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -442,6 +434,11 @@ ul{
 }
 /* portrait phones */
 @media only screen and (max-width: 575.98px){
+    body{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }  
 
 }
 /* mobile */
@@ -490,7 +487,6 @@ ul{
     }
     .support-customer {
         display: flex;
-        flex-direction: column;
         margin:auto;
         margin-top: 2em;
         margin-bottom: 2em;
@@ -501,7 +497,6 @@ ul{
         justify-content: center;
     }
     .product-display-item{
-        width: 45%;
         margin: 0.5em;
     }
     .brand-container{
@@ -573,15 +568,13 @@ ul{
         margin: 0;
     }
     .support-customer{
-        display: flex;
-        flex-direction: row;
         margin-right: 0;
         margin-left: 0;
         margin-top: 30px;
         margin-bottom: 30px;
     }
     .product-display-item {
-        width: 20%;
+        /* width: 20%; */
     }
     .product-img img {
         margin-left: 1em;
@@ -629,10 +622,6 @@ ul{
         margin-left: 60px;
         margin-right: 60px;
     }
-    .support-customer{
-        margin-left: 60px;
-        margin-right: 60px;
-    }
     .before-footer-content{
         margin-left: 60px;
         margin-right: 60px;
@@ -643,10 +632,6 @@ ul{
         margin-right: 60px;
     }
     .site-footer-content{
-        margin-left: 60px;
-        margin-right: 60px;
-    }
-    .brand-container{
         margin-left: 60px;
         margin-right: 60px;
     }
